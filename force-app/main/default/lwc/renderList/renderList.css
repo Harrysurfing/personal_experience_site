@@ -1,0 +1,15 @@
+.list-container {
+  margin-top: 2px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.details {
+  list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .details {
+    display: none;
+  }
+}

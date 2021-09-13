@@ -1,0 +1,39 @@
+<template>
+  <div class="to-do-list-container">
+    <lightning-layout class="button-section">
+      <lightning-input
+        type="text"
+        placeholder="Type in here your to-dos!"
+        label="search"
+        variant="label-hidden"
+        onchange={handleChange}
+        value={eventToAdd}
+        class="slds-size_10-of-12"
+      >
+      </lightning-input>
+      <lightning-button
+        variant="brand"
+        label="Add"
+        onclick={handleAdd}
+      ></lightning-button>
+    </lightning-layout>
+    <lightning-layout class="list-section">
+      <template
+        for:each={todos}
+        for:item="todo"
+        for:index="i"
+        for:true={renderList}
+      >
+        <lightning-layout-item class="list-item" key={todo}>
+          <span> {todo} </span>
+          <div class="delete-icon" data-id={i} onclick={handleDelete}>
+            <lightning-icon
+              icon-name="utility:close"
+              size="small"
+            ></lightning-icon>
+          </div>
+        </lightning-layout-item>
+      </template>
+    </lightning-layout>
+  </div>
+</template>

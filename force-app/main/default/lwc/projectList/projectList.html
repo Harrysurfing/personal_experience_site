@@ -1,0 +1,28 @@
+<template>
+  <div class="list-container slds-grid slds-gutters_x-small slds-wrap">
+    <template for:each={projects} for:item="project">
+      <div
+        class="slds-col slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_4-of-12 card-container"
+        key={project.link}
+      >
+        <c-ribbon notready={project.notReady}></c-ribbon>
+        <lightning-card class="card">
+          <div slot="title">{project.name}</div>
+          <div class="img-container">
+            <img src={project.img} alt="list" class="list-img" />
+          </div>
+          <div slot="footer" class="footer">
+            <lightning-button
+              disabled={project.notReady}
+              variant="brand"
+              data-path={project.path}
+              label="Go To Project"
+              onclick={handleNavigation}
+            >
+            </lightning-button>
+          </div>
+        </lightning-card>
+      </div>
+    </template>
+  </div>
+</template>

@@ -1,0 +1,45 @@
+<template>
+  <div class="tesla-detail_container" if:true={carData}>
+    <div class="overlay"></div>
+    <div class="close">
+      <lightning-button-icon
+        icon-name="utility:close"
+        variant="border-filled"
+        size="medium"
+        onclick={handleClose}
+      ></lightning-button-icon>
+    </div>
+    <lightning-tabset variant="scoped" class="tabset">
+      <lightning-tab label="Tech Specs">
+        <div class="tesla-info">
+          <h2>{carData.Name}</h2>
+          <span>Range (Est.): {carData.Range_est__c} km</span>
+          <span>Top Speed: {carData.Top_Speed__c} km/h</span>
+          <div class="car-info optional" if:false={carData.Truck__c}>
+            <span
+              >Acceleration (0 - 100 km/h): {carData.Acceleration_car__c}
+              s</span
+            >
+            <span>Cargo (Liter): {carData.Cargo__c}</span>
+          </div>
+          <div class="truck-info optional" if:true={carData.Truck__c}>
+            <span
+              >Acceleration (0 - 60 MPH): {carData.Acceleration_truck__c}
+              s</span
+            >
+            <span>Storage (CU FT): {carData.Storage__c}</span>
+          </div>
+          <span>Has be choosen {carData.Count__c} times</span>
+        </div>
+        <lightning-button
+          label="Rent this Tesla!"
+          variant="brand"
+          onclick={handleRent}
+        ></lightning-button>
+      </lightning-tab>
+      <lightning-tab label="See Trend">
+        <c-tesla-chart></c-tesla-chart>
+      </lightning-tab>
+    </lightning-tabset>
+  </div>
+</template>

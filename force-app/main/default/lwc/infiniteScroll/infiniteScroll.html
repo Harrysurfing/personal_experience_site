@@ -1,0 +1,7 @@
+<template>
+  <div class="scroll-container" onscroll={handleScroll}>
+    <template for:each={cards} for:item="card">
+      <lightning-tile class="card" key={card.id}>{card.text} </lightning-tile>
+    </template>
+  </div>
+</template>

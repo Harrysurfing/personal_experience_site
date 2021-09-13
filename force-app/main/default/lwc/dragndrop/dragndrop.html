@@ -1,0 +1,53 @@
+<template>
+  <div class="dnd-container">
+    <div class="droppable" ondrop={handleDrop} ondragover={handleDragOver}>
+      <div
+        class="draggable"
+        id="drag1"
+        draggable="true"
+        ondragstart={handleDragStart}
+      >
+        I am a draggable
+      </div>
+      <div
+        class="draggable"
+        id="drag2"
+        draggable="true"
+        ondragstart={handleDragStart}
+      >
+        I am a draggable
+      </div>
+      <div
+        class="draggable"
+        id="drag3"
+        draggable="true"
+        ondragstart={handleDragStart}
+      >
+        I am a draggable
+      </div>
+    </div>
+    <div class="droppable" ondrop={handleDrop} ondragover={handleDragOver}>
+      <div
+        class="draggable"
+        id="drag4"
+        ondragstart={handleDragStart}
+        draggable="true"
+      >
+        I am also a draggable
+      </div>
+    </div>
+    <div
+      class="droppable"
+      ondrop={handleDrop}
+      ondragover={handleDragOver}
+    ></div>
+    <!-- <template for:each={items} for:item="item" for:index="index">
+      <div
+        class="sth"
+        key={item.id}
+        data-index={index}
+        onclick={handleClick}
+      ></div>
+    </template> -->
+  </div>
+</template>

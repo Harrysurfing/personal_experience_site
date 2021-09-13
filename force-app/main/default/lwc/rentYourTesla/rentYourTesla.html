@@ -1,0 +1,39 @@
+<template>
+  <div class="tesla-container">
+    <div class="tesla-cars">
+      <lightning-combobox
+        name="cartype"
+        label="cartype"
+        variant="label-hidden"
+        value={value}
+        options={options}
+        onchange={handleChange}
+      >
+      </lightning-combobox>
+      <lightning-layout
+        multiple-rows
+        class="slds-grid slds-gutters_x-small slds-wrap"
+      >
+        <template for:each={teslasToShow} for:item="tesla">
+          <lightning-layout-item
+            key={tesla.Id}
+            class="slds-col slds-large-size_4-of-12 slds-medium-size_6-of-12 slds-small-size_12-of-12"
+          >
+            <div class="tile" data-value={tesla.Id} onclick={handleCarSelect}>
+              <div class="tesla-image_container">
+                <img src={tesla.Image__c} alt="teslapic" class="tesla-img" />
+              </div>
+              {tesla.Name}
+            </div>
+          </lightning-layout-item>
+        </template>
+      </lightning-layout>
+    </div>
+    <div class="tesla-chart">
+      <c-tesla-detail
+        onclosecardetails={handleClose}
+        recordid={selectedRecordId}
+      ></c-tesla-detail>
+    </div>
+  </div>
+</template>

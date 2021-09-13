@@ -1,0 +1,196 @@
+<template>
+  <div class="avatar-maker-container">
+    <div class="entry-screen" if:false={nameEntered}>
+      <h1 class="name-input-label">Please enter your avatar name</h1>
+      <lightning-input
+        label="Avatar Name"
+        variant="label-hidden"
+        onchange={handleNameInput}
+        class="name-input"
+      ></lightning-input>
+      <lightning-button
+        label="Confirm"
+        onclick={handleNameConfirm}
+        variant="brand"
+        class="name-input"
+      ></lightning-button>
+    </div>
+    <div class="maker-screen" if:true={nameEntered}>
+      <div class="avatar-container">
+        <img src={constructedUrl} alt="svg-avatar" />
+        <div class="avatar-name">{name}</div>
+        <a href={constructedUrl} class="download-avatar" download={name}>
+          <lightning-button
+            variant="brand"
+            icon-name="utility:download"
+            icon-position="left"
+            label="Download Avatar"
+          ></lightning-button>
+        </a>
+      </div>
+      <div class="options-container">
+        <div class="general-options">
+          <div class="avatar-size">
+            <span>size</span>
+            <lightning-button-group>
+              <lightning-button
+                label="Small"
+                value="small"
+                onclick={handleGeneralChange}
+              ></lightning-button>
+              <lightning-button
+                label="Medium"
+                value="medium"
+                onclick={handleGeneralChange}
+              ></lightning-button>
+              <lightning-button
+                label="Large"
+                value="large"
+                onclick={handleGeneralChange}
+              ></lightning-button>
+            </lightning-button-group>
+          </div>
+          <div class="avatar-shape">
+            <span>shape</span>
+            <lightning-button-group>
+              <lightning-button
+                label="Square"
+                value="square"
+                onclick={handleGeneralChange}
+              ></lightning-button>
+              <lightning-button
+                label="Round"
+                value="round"
+                onclick={handleGeneralChange}
+              ></lightning-button>
+            </lightning-button-group>
+          </div>
+          <div class="avatar-back">
+            <span>Background</span>
+            <lightning-button-group>
+              <lightning-button
+                label="None"
+                value="none"
+                onclick={handleGeneralChange}
+              ></lightning-button>
+              <lightning-button
+                label="Light"
+                value="light"
+                onclick={handleGeneralChange}
+              ></lightning-button>
+              <lightning-button
+                label="Dark"
+                value="dark"
+                onclick={handleGeneralChange}
+              ></lightning-button>
+            </lightning-button-group>
+          </div>
+        </div>
+        <lightning-combobox
+          name="top"
+          label="🔝Top"
+          placeholder="Choose top"
+          value={top}
+          options={topOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="hatColor"
+          label="🎩 Hat Color"
+          placeholder="Choose hat color"
+          value={hatColor}
+          options={hatColorOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="hairColor"
+          label="💈 Hair Color"
+          placeholder="Choose hair color"
+          value={hairColor}
+          options={hairColorOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="glasses"
+          label="👓 Glasses"
+          placeholder="Choose glasses"
+          value={glasses}
+          options={glassesOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="glassesColor"
+          label="💈 Glasses Color"
+          placeholder="Choose glasses color"
+          value={glassesColor}
+          options={glassesColorOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="facialHair"
+          label="🧔🏻 Facial Hair"
+          placeholder="Choose facial hair"
+          value={facialHair}
+          options={facialHairOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="facialHairColor"
+          label="💈 Facial Hair Color"
+          placeholder="Choose facial hair color"
+          value={facialHairColor}
+          options={facialHairColorOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="eyes"
+          label="👀 Eyes"
+          placeholder="Choose eyes"
+          value={eyes}
+          options={eyesOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="eyebrow"
+          label="🤨 Eyebrow"
+          placeholder="Choose eyebrow"
+          value={eyebrow}
+          options={eyebrowOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="skin"
+          label="🚿 Skin"
+          placeholder="Choose skin"
+          value={skin}
+          options={skinOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="mouth"
+          label="👄 Mouth"
+          placeholder="Choose mouth"
+          value={mouth}
+          options={mouthOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="clothes"
+          label="👕 Clothes"
+          placeholder="Choose clothes"
+          value={clothes}
+          options={clothesOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+        <lightning-combobox
+          name="clothesColor"
+          label="💈 Clothes Color"
+          placeholder="Choose clothes color"
+          value={clothesColor}
+          options={clothesColorOptions}
+          onchange={handleDetailChange}
+        ></lightning-combobox>
+      </div>
+    </div>
+  </div>
+</template>

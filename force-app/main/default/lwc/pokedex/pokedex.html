@@ -1,0 +1,35 @@
+<template>
+  <div class="pokedex-container">
+    <template if:true={isLoading}>
+      <c-pokemon-loading></c-pokemon-loading>
+    </template>
+    <div class="search-bar">
+      <lightning-input
+        label="Name"
+        variant="label-hidden"
+        value={searchValue}
+        onchange={handleSearchValueChange}
+        placeholder="Enter Pokémon name (partial name works)"
+        class="search"
+      ></lightning-input>
+      <lightning-button
+        label="Search"
+        icon-name="utility:search"
+        icon-position="right"
+        variant="brand"
+        onclick={handleSearch}
+      ></lightning-button>
+    </div>
+
+    <div class="card-list slds-grid slds-wrap slds-gutters" if:true={searched}>
+      <template for:each={cardList} for:item="card">
+        <div
+          class="card slds-col slds-large-size_3-of-12 slds-medium-size_4-of-12 slds-small-size_12-of-12"
+          key={card.name}
+        >
+          <c-pokemon-card pokemon={card}></c-pokemon-card>
+        </div>
+      </template>
+    </div>
+  </div>
+</template>

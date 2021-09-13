@@ -1,0 +1,41 @@
+/* .container {
+  width: 50vw;
+  height: 50vw;
+  margin: auto;
+  background: black;
+  position: relative;
+} */
+
+.ribbon-box {
+  /* width: 100%; */
+  background: transparent;
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+}
+.ribbon {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  font-size: medium;
+  text-transform: uppercase;
+  color: white;
+
+  display: block;
+  top: 21%;
+  right: -15%;
+  transform: rotate(45deg);
+  z-index: 1;
+  opacity: 0.95;
+}
+.not-ready {
+  background-color: lightcoral;
+}
+.ready {
+  background-color: lightgreen;
+}

@@ -1,0 +1,27 @@
+.container {
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  margin-top: 10px;
+}
+
+.txt-type > .txt {
+  color: orangered;
+  animation: cursor 0.4s infinite;
+}
+
+@keyframes cursor {
+  0% {
+    border-right: 2px solid black;
+  }
+  100% {
+    border-right: 2px solid transparent;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    font-size: small;
+  }
+}

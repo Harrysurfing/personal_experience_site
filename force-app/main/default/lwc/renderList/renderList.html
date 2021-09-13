@@ -1,0 +1,9 @@
+<template>
+  <div class="list-container">
+    <ul class="details">
+      <template for:each={list} for:item="detail">
+        <li class="detail" key={detail}>{detail}</li>
+      </template>
+    </ul>
+  </div>
+</template>

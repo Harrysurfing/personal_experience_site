@@ -1,0 +1,78 @@
+.avatar-maker-container {
+  width: 100%;
+}
+
+.entry-screen {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.maker-screen {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.name-input-label {
+  font-size: large;
+  font-family: fantasy;
+  margin-bottom: 0.5rem;
+}
+.name-input {
+  margin-bottom: 0.5rem;
+}
+.avatar-name {
+  font-family: fantasy;
+  font-weight: bold;
+  line-height: 2rem;
+  font-size: large;
+  text-transform: capitalize;
+}
+
+.avatar-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.general-options {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.avatar-back,
+.avatar-size,
+.avatar-shape {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  color: gray;
+  text-transform: capitalize;
+}
+
+.options-container {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 5%;
+}
+
+@media only screen and (max-width: 645px) {
+  .avatar-container {
+    width: 100%;
+  }
+  .options-container {
+    width: 100%;
+  }
+} ;

@@ -1,0 +1,36 @@
+.list-container {
+  width: 80%;
+  margin: auto;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+.list-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}

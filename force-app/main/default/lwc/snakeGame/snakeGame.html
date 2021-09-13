@@ -1,0 +1,9 @@
+<template>
+  <div class="score">Score: {score}</div>
+  <div class="container" onkeydown={handleKeyPress} tabindex="0">
+    <template for:each={snake} for:item="snakePart">
+      <div class="snake" style={snakePart.style} key={snakePart.style}></div>
+    </template>
+    <div class="food" style={food.style}></div>
+  </div>
+</template>

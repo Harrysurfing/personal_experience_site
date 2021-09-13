@@ -1,0 +1,33 @@
+<template>
+  <div class="guestbook-container">
+    <lightning-input
+      type="text"
+      label="Name"
+      placeholder="Enter your name"
+      value={guestName}
+      onchange={handleNameChange}
+    ></lightning-input>
+    <lightning-input
+      label="Email"
+      type="email"
+      placeholder="Enter your email"
+      value={guestEmail}
+      onchange={handleEmailChange}
+      required="true"
+      class="slds-m-bottom_small"
+    ></lightning-input>
+    <lightning-input-rich-text
+      value={guestMessage}
+      placeholder="Your message here!"
+      onchange={handleMessageChange}
+      class="slds-m-bottom_small"
+    ></lightning-input-rich-text>
+    <lightning-button
+      variant="brand"
+      label="Leave Message"
+      title="Leave Message"
+      onclick={handleSubmit}
+      class="slds-size_1-of-3 button slds-m-bottom_small"
+    ></lightning-button>
+  </div>
+</template>

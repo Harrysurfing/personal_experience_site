@@ -1,0 +1,35 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.logo {
+  margin: 2% 10px 2% 10px;
+}
+
+.logo:hover {
+  cursor: pointer;
+  transform: translateY(-10%);
+  /* animation: showLogo 2s forwards; */
+}
+
+/* .first-logo {
+  animation: showLogo 2s forwards;
+}
+.second-logo {
+  animation: showLogo 2s forwards 1s;
+}
+.third-logo {
+  animation: showLogo 2s forwards 2s;
+} */
+
+@keyframes showLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

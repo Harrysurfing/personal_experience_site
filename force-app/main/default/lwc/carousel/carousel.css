@@ -1,0 +1,113 @@
+.carousel-wrapper {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 60%;
+  max-width: 620px;
+  height: 60vh;
+  max-height: 600px;
+  position: relative;
+}
+
+.carousel-img-container {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  position: relative;
+  margin-bottom: 2rem;
+  /* overflow: hidden; */
+  /* border: 1px solid black; */
+}
+.carousel-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.carousel-img {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  /* animation: slide 0.5s forwards;
+  animation-delay: 1s; */
+  /* animation-direction: reverse; */
+}
+.carousel-title {
+  font: bolder;
+  text-transform: capitalize;
+  font-size: larger;
+}
+.carousel-description {
+  font: italic;
+  color: gray;
+}
+.manual-nav {
+  display: flex;
+  height: 1rem;
+}
+
+.manual-nav-button {
+  display: inline-block;
+  border: 2px lightblue solid;
+  border-radius: 50%;
+  background: none;
+  margin: 0 2px;
+}
+.manual-nav-button:hover,
+.manual-nav-button:focus {
+  box-shadow: 0 5px 15px rgba(120, 169, 233, 0.4);
+  outline: none;
+}
+.manual-nav-button-clicked {
+  background-color: lightskyblue;
+}
+
+.img-slide-right {
+  right: -100%;
+  animation: slideright 0.4s forwards;
+  animation-delay: 0s;
+}
+.img-slide-left {
+  left: -100%;
+  animation: slideleft 0.4s forwards;
+  animation-delay: 0s;
+}
+
+@keyframes slideright {
+  100% {
+    right: 0;
+  }
+}
+@keyframes slideleft {
+  100% {
+    left: 0;
+  }
+}
+.next-button {
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(100%);
+}
+.previous-button {
+  border: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-100%);
+}
+.next-button:hover,
+.previous-button:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 16px black);
+}

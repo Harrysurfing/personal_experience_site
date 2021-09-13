@@ -1,0 +1,30 @@
+.to-do-list-container {
+  width: 100vw;
+}
+
+.button-section {
+  width: 90%;
+  margin-bottom: 5px;
+}
+.list-section {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 2px;
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-icon {
+  border: none;
+  background: none;
+}
+.delete-icon:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,40 @@
+<template>
+  <div class="carousel-wrapper">
+    <div class="carousel-container">
+      <div class="carousel-img-container">
+        <div class="loading-img" if:true={isLoading}>
+          <lightning-spinner
+            alternative-text="loading"
+            size="large"
+          ></lightning-spinner>
+        </div>
+        <img
+          src={currentPage.img_src}
+          alt="carousel-img"
+          class={imgClass}
+          onload={handleImgLoad}
+        />
+        <div class="next-button" onclick={getNextPage}>
+          <lightning-icon icon-name="utility:chevronright"></lightning-icon>
+        </div>
+        <div class="previous-button" onclick={getPreviousPage}>
+          <lightning-icon icon-name="utility:chevronleft"></lightning-icon>
+        </div>
+      </div>
+      <div class="carousel-detail-container">
+        <h2 class="carousel-title">{currentPage.header}</h2>
+        <div class="carousel-description">{currentPage.description}</div>
+        <div class="manual-nav">
+          <template for:each={certs} for:item="cert" for:index="index">
+            <button
+              key={cert.header}
+              data-index={index}
+              onclick={handleManualNav}
+              class="manual-nav-button"
+            ></button>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

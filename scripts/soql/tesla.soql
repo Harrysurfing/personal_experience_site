@@ -1,0 +1,2 @@
+SELECT Acceleration_car__c, Cargo__c, Acceleration_truck__c, Image__c, Name, Truck__c, Top_Speed__c, Storage__c, Range_est__c
+  FROM Tesla__c
