@@ -6,12 +6,22 @@ import MAVERIK from "@salesforce/resourceUrl/maverik";
 
 export const Employment = [
   {
+    id: 6,
+    title: "Salesforce Developer",
+    place: "Mav3rik",
+    time: "Jan 2023 - Present",
+    details: [
+      "Currently working as a Salesforce Developer across multiple projects"
+    ],
+    logo: MAVERIK
+  },
+  {
     id: 1,
     title: "Salesforce Developer",
     place: "Revolent Group",
-    time: "Aug 2020 - Present",
+    time: "Aug 2020 - Jan 2023",
     details: [
-      "3x Salesforce Certified – Administrator, Platform Developer 1 and Javascript 1.",
+      "5x Salesforce Certified.",
       "Developed reports and dashboards to visually enhance complex data sets.",
       "Created profiles, sharing rules and role hierarchies to enhance org’s security.",
       "Developed Apex classes with at least 75% test coverage and triggers with at least 1% test coverage. Also developed Visualforce pages.",
@@ -23,10 +33,13 @@ export const Employment = [
     id: 5,
     title: "Client work: Mav3rik",
     place: "Mav3rik",
-    time: "Apr 2021 - Present",
+    time: "Apr 2021 - Jan 2023",
     details: [
-      "Currently working at Mav3rik as a Salesforce Developer",
-      "Maintain existing code base and develop, test code based on requirements from Primesafe project"
+      "Advanced custom configurations including flows, custom metadata, custom settings, named credentials and connected app",
+      "Apex development and testing with advanced apex features",
+      "System integration and testing",
+      "Custom UI development using LWC and other modern framework",
+      "Deployment duties with Gearset and source control",
     ],
     logo: MAVERIK
   },
